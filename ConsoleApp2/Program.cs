@@ -8,40 +8,27 @@ namespace ConsoleApp2
 {
     class Program
     {
-        public static int BinarySearch(int[] arr, int num)
-        {
-            int min = 0;
-            int max = arr.Length - 1;
-            while (min <= max)
-            {
-                int mid = (max + min) / 2;
-                if (num == arr[mid])
-                {
-                    Console.WriteLine("number is" +  arr[mid]);
-                   return mid;
-                }
-                else if (num < arr[mid])
-                {
-                    max = mid - 1;
-                }
-                else
-                {
-                    min = mid + 1;
-                }
-
-            }
-            Console.WriteLine("Number Not found");
-            return 0;
-        }
+        
         static void Main(string[] args)
         {
             Program p = new Program();
-            int[] arr = {1, 2, 3, 4,5};
-            BinarySearch(arr, 11);
+            //int[] arr = {1, 2, 3, 4,5,6};
+            int[] arr2 = { 44, 22, 89,100, 31 };
+           //BinarySeach.BinarySearch(arr, 3);
+           var arr= SelectionSort.SelectionSortAlgo(arr2);
+            p.printArrays(arr);
+        }
+
+       public void printArrays(int[] arr)
+        {
+            for (int i = 0; i<arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]+"sorted");
+            }
         }
         
     }
-
+    
 
     
     
