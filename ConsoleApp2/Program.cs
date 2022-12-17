@@ -18,6 +18,7 @@ namespace ConsoleApp2
            var arr= SelectionSort.SelectionSortAlgo(arr2);
             p.printArrays(arr);
             Console.WriteLine(p.FindFactorialOfNum(3) + "Factorial");
+            p.printFibonacciSeries1(10);
         }
         public int FindFactorialOfNum(int num)
         {
@@ -28,6 +29,21 @@ namespace ConsoleApp2
             else
             {
                 return num* FindFactorialOfNum(num - 1);
+            }
+        }
+        public void printFibonacciSeries1(int numberOfseries)
+        {
+            int val1 = 0;
+            int val2 = 1;
+            int val3;
+            Console.WriteLine(val1);
+            Console.WriteLine(val2);
+            for (int i=2; i<numberOfseries; i++)
+            {
+                val3 = val1 + val2;
+                Console.WriteLine(val3);
+                val1 = val2;
+                val2 = val3;
             }
         }
        public void printArrays(int[] arr)
