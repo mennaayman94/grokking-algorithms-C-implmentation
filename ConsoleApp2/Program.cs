@@ -19,6 +19,7 @@ namespace ConsoleApp2
             p.printArrays(arr);
             Console.WriteLine(p.FindFactorialOfNum(3) + "Factorial");
             p.printFibonacciSeries1(10);
+            Console.WriteLine(p.printRecursiveFibonacciSeries(9) + "number");
         }
         public int FindFactorialOfNum(int num)
         {
@@ -44,6 +45,17 @@ namespace ConsoleApp2
                 Console.WriteLine(val3);
                 val1 = val2;
                 val2 = val3;
+            }
+        }
+        public int printRecursiveFibonacciSeries(int num)
+        {
+            if(num==0 || num == 1)
+            {
+                return num;
+            }
+            else
+            {
+                return printRecursiveFibonacciSeries(num - 1) + printRecursiveFibonacciSeries(num - 2);
             }
         }
        public void printArrays(int[] arr)
