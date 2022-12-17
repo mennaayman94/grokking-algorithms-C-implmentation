@@ -8,6 +8,7 @@ namespace ConsoleApp2
 {
   public static  class BinarySeach
     {
+        //o log n
         public static int BinarySearch(int[] arr, int num)
         {
             int min = 0;

@@ -8,6 +8,7 @@ namespace ConsoleApp2
 {
   public static  class SelectionSort
     {
+        //o (n^2)
         public static int[] SelectionSortAlgo(int[] arr)
         {
             int smallestNum;
@@ -26,6 +27,7 @@ namespace ConsoleApp2
                 arr[smallestNum] = arr[i];
                 arr[i] = temNum;
             }
+          
             return arr;
         }   
     }

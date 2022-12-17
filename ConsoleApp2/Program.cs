@@ -17,8 +17,19 @@ namespace ConsoleApp2
            //BinarySeach.BinarySearch(arr, 3);
            var arr= SelectionSort.SelectionSortAlgo(arr2);
             p.printArrays(arr);
+            Console.WriteLine(p.FindFactorialOfNum(3) + "Factorial");
         }
-
+        public int FindFactorialOfNum(int num)
+        {
+            if (num == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return num* FindFactorialOfNum(num - 1);
+            }
+        }
        public void printArrays(int[] arr)
         {
             for (int i = 0; i<arr.Length; i++)
